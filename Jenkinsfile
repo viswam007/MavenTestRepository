@@ -1,19 +1,21 @@
 pipeline{
   agent any
     stages {
-       stage ('Devlopement')
+      stage ("Build") {
          steps {
-                 echo 'Code Development'
+                 echo 'Building application'
              }
-
-       stage ('QA')
+      }
+      stage ("Test") {
          steps {
-            echo 'QA'
+            echo 'QA Application'
              }
-
-       stage ('PerfTesting')
+      }
+      
+      stage ("Deploy") {
          steps {
-            echo 'PerfTesting'
+            echo 'Deploy Application'
              }
     }
+  }
 }
