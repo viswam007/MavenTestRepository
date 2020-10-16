@@ -9,16 +9,12 @@ pipeline{
           }
    }
 
-    stages {
        stage ('Testing stage')
          steps {
             sh 'mvn test'
              }
-    }
 
-    stages {
        stage ('Deployment stage')
          steps {
             sh 'mvn deploy'
              }
-    }
